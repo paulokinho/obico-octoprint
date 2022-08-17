@@ -2,10 +2,13 @@ version: '2.4'
 
 services:
   octoprint:
-    image: octoprint/octoprint
-    restart: unless-stopped
+    build: ./octoprint
+    restart: always
     ports:
-      - 80:80
+      - '80:5000'
+    privileged: true
+    labels:
+      io.balena.features.supervisor-api: 1
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
       - /dev/video0:/dev/video0
@@ -15,6 +18,10 @@ services:
       - ENABLE_MJPG_STREAMER=true
     volumes:
      - octoprint:/octoprint
+     - 'octoprint-data:/data'
+     - 'plugins:/usr/local/lib/python3.7/dist-packages'
   
 volumes:
   octoprint:
+  octoprint-data: { }
+  plugins:

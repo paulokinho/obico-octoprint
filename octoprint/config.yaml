@@ -1,0 +1,18 @@
+webcam:
+  timelapseEnabled: false
+  webcamEnabled: false
+plugins:
+  DisplayLayerProgress:
+    showAllPrinterMessages: false
+    showHeightInStatusBar: false
+    showLayerInStatusBar: false
+    showOnBrowserTitle: false
+    showOnNavBar: false
+    showOnPrinterDisplay: true
+  thespaghettidetective:
+    auth_token: ${OBICO_TOKEN}
+    sentry_opt: in
+serial:
+  autoconnect: true                                                                                                                     
+  baudrate: 0                                                                                                                           
+  port: AUTO
