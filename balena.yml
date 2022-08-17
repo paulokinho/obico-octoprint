@@ -1,0 +1,25 @@
+name: Obico Octoprint
+description: Remotely control your 3D-printer with Obico, Octoprint and balena!
+type: sw.application
+post-provisioning: |-
+  ## Usage instructions
+
+  Once your device joins the fleet you'll need to allow some time for it to download the application. When it's completed you should be able to access the Octoprint web interface by entering octoprint.local in a web browser.
+
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: https://github.com/paulokinho/obico-octoprint
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/paulokinho/obico-octoprint/master/logo.png
+data:
+  defaultDeviceType: raspberrypi3
+  supportedDeviceTypes:
+    - raspberrypi3
+    - fincm3
+    - raspberrypi4-64
+version: 1.0.0
