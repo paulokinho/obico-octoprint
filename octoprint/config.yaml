@@ -1,6 +1,9 @@
 webcam:
   timelapseEnabled: false
   webcamEnabled: false
+  ffmpeg: /usr/bin/ffmpeg
+  snapshot: http://localhost:8080/?action=snapshot
+  stream: /webcam/?action=stream
 plugins:
   DisplayLayerProgress:
     showAllPrinterMessages: false
